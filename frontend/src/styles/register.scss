@@ -1,0 +1,101 @@
+.register-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    .register-image{
+        background-image: url('../assets/images/Splash\ Screens.jpg');
+        background-size: cover;
+    background-position: bottom;
+    height: 60vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        text-align: center;
+    width: 300px;
+    height: 200px;
+    }
+    }
+     .register-form{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 350px;
+        left: 570px;
+        width: 400px;
+        background: #fff;
+        border-radius: 20px;
+        padding: 30px;
+        .links{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 5px; 
+                left: -30px;
+                width: 400px;
+                height: 1px;
+                background-color: #EFEFF4; 
+                border-radius: 5px;
+              }
+        a{
+            text-decoration: none;
+            padding: 0 20px 30px;
+            font-family: sans-serif;
+            font-size: 22px;
+            color: #C8C7CC;
+            &.active-link{
+                position: relative;
+                color: #262628;
+                
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 20px; 
+    left: 30px;
+    width: 45px;
+    height: 4px;
+    background-color: #F0C414; 
+    border-radius: 5px;
+  }
+            }
+        }
+        }
+       form{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        input{
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: #EFEFF4 1px solid;
+            &::placeholder{
+                color: #C8C7CC;
+            }
+        }
+        select{
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: #EFEFF4 1px solid;
+            color: #C8C7CC;
+            option{
+                color: #C8C7CC;
+            }
+        }
+        button{
+            background-color: #F0C414;  
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+       }
+    
+     }  
+    
+}

@@ -15,7 +15,8 @@ app.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+.connect(process.env.MONGO_URI)
+
   .then(() => {
     console.log('MongoDB connected');
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
@@ -27,3 +28,9 @@ app.use('/api/auth', authRoutes);
 
 const rideRoutes = require('./routes/rideRoutes');
 app.use('/api/rides', rideRoutes);
+
+
+app.get('/', (req, res) => {
+    res.send('Taxi Backend is working!');
+  });
+  
