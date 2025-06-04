@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import API from '../api';
 import Logo from '../assets/images/logotype.svg'
 
 const Login = () => {
+    const navigate = useNavigate();
      const [form, setForm] = useState({
     phone: '',
     password: '',
@@ -19,6 +20,11 @@ const Login = () => {
       const res = await API.post('/auth/login', form);
       console.log(res)
       alert(res.data.message);
+
+   if (res.status === 200) {
+        navigate('/');
+      }
+
     } catch (err) {
       alert(err.response.data.message);
     }

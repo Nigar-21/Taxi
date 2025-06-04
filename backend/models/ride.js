@@ -12,14 +12,15 @@ const rideSchema = new mongoose.Schema({
     ref: 'Vehicle',
     required: true,
   },
-  startLocation: {
-    type: String,
-    required: true,
-  },
-  endLocation: {
-    type: String,
-    required: true,
-  },
+ pickupLocation: {
+  type: String,
+  required: true,
+},
+dropoffLocation: {
+  type: String,
+  required: true,
+},
+
   seatsAvailable: {
     type: Number,
     required: true,

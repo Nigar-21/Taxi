@@ -33,7 +33,7 @@ exports.createRide = async (req, res) => {
 // Bütün ride-ları əldə etmək
 exports.getAllRides = async (req, res) => {
   try {
-    const rides = await ride.find().populate('passenger driver vehicle', 'name phone model licensePlate');
+   const rides = await Ride.find().populate('passenger driver vehicle', 'name phone model licensePlate');
     res.status(200).json(rides);
   } catch (error) {
     res.status(500).json({ message: 'Server xətası', error: error.message });

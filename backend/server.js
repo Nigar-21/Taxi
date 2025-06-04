@@ -2,13 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
+const fetch = require('node-fetch');
 
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Routes (əlavə edəcəyik sonra)
+
 app.get('/', (req, res) => {
   res.send('Taxi Backend is working!');
 });
@@ -30,7 +31,4 @@ const rideRoutes = require('./routes/rideRoutes');
 app.use('/api/rides', rideRoutes);
 
 
-app.get('/', (req, res) => {
-    res.send('Taxi Backend is working!');
-  });
-  
+
